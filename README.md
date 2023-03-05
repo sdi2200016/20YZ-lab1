@@ -18,7 +18,7 @@ void point_print(Point p)
     printf("(%d, %d)", p.x, p.y);
 }
 
-// CHANGE
+
 void point_move_horizontally(Point *p, int units) 
 {
     p->x += units;
@@ -26,28 +26,28 @@ void point_move_horizontally(Point *p, int units)
 
 void triangle_print(Triangle* t) 
 {
-    for (int i = 0; i < 3 ; i++) { // CHANGE 
+    for (int i = 0; i < 3 ; i++) { 
         point_print(t->points[i]);
     }
 }
 
 void triangle_move_horizontally(Triangle* t, int units) 
 {
-    for (int i = 0; i < 3 ; i++) { // CHANGE 
+    for (int i = 0; i < 3 ; i++) { 
         t->points[i].x += units;
     }
 }
 
 int main(void)
 {
-    Point* a = malloc(sizeof(struct point)) // CHANGE
+    Point* a = malloc(sizeof(struct point)) 
     a->x = 0;
     a->y = 0;
 
     point_print(*a);
     printf("\n");
 
-    point_move_horizontally(a, 5); // CHANGE
+    point_move_horizontally(a, 5); 
 
     point_print(*a);
     printf("\n");
@@ -69,7 +69,7 @@ int main(void)
 
     triangle_print(t);
     printf("\n");
-    free(t); // CHANGE
+    free(t); 
 
     return 0;
 }
