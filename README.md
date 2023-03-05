@@ -26,14 +26,16 @@ void point_move_horizontally(Point *p, int units)
 
 void triangle_print(Triangle* t) 
 {
-    for (int i = 0; i < 3 ; i++) { 
+    int i;
+    for (i = 0; i < 3 ; i++) { 
         point_print(t->points[i]);
     }
 }
 
 void triangle_move_horizontally(Triangle* t, int units) 
 {
-    for (int i = 0; i < 3 ; i++) { 
+    int i;
+    for (i = 0; i < 3 ; i++) { 
         t->points[i].x += units;
     }
 }
